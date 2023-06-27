@@ -1,0 +1,115 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<form action="">
+    <div class="container mt-5">
+        <h3>Agregar producto</h3>
+        <form action="#">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="SKU">
+                        <label for="floatingInput">SKU</label>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Nombre">
+                        <label for="floatingInput">Nombre</label>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Cantidad">
+                        <label for="floatingInput">Cantidad</label>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Género">
+                        <label for="floatingInput">Género</label>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Artista">
+                        <label for="floatingInput">Artista</label>
+                      </div>
+                </div>
+                
+<!--                 <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="file" class="form-control" id="floatingInput" placeholder="">
+                        <label for="floatingInput">Imagen</label>
+                      </div>
+                </div> -->
+
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</button>
+                </div>
+                
+
+                <!--Tabla-->
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Juanito</td>
+                          <td>Perez</td>
+                          <td>@jpr</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Javier</td>
+                          <td>Tarantino</td>
+                          <td>@jat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td colspan="2">Carri</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" data-bs-toggle="modal" id="exampleModalLabel">Eliminar producto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Desea eliminar el producto seleccionado?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>
+
+{% endblock %}
